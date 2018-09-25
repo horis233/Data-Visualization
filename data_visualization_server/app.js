@@ -1,16 +1,17 @@
-var bodyParser = require('body-parser');
-var express = require('express');
+import bodyParser from 'body-parser';
+//var express = require('express');
+import express, { Router } from 'express';
 var index = require('./routes/index');
-var user_data = require('./routes/dataVisulization');
+var user_data = require('./routes/data_visualization');
 var path = require('path');
 
 //var cors = require('cors');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, '../client/build'));
-//app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
 app.use('/static', express.static(path.join(__dirname, '../client/build/static/')));
 
 app.all('*', function(req,res,next){
@@ -43,5 +44,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(3000);
 
 module.exports = app;
