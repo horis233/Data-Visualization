@@ -1,6 +1,5 @@
 import React from 'react';
 import SingleCard from '../SingleCard/SingleCard.js';
-import Range from '../Range/Range.js';
 
 const user_data = [
     {

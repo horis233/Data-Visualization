@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PanelHeader from '../PanelHeader/PanelHeader.js';
 import Panel from '../Panel/Panel.js';
-import Range from '../Range/Range.js';
 
 import UserTrend from '../UserTrend/UserTrend.js';
 import ActiveUserChart from '../ActiveUserChart/ActiveUserChart.js';
 import DevicePieChart from '../DevicePieChart/DevicePieChart.js';
 import NewsCategory from '../NewsCategory/NewsCategory.js';
-
-const category = ['technology', 'music', 'education','sports','politics', 'weather','others'];
 
 class MainContainer extends React.Component{
     constructor(){
